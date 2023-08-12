@@ -57,6 +57,11 @@ main {
     color: white;
     border: none;
     cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+.form--button:hover {
+    background:   linear-gradient(90.41deg, #a72ece 1.14%, #A500DF 100%);
 }
 
 .meme {
@@ -64,8 +69,9 @@ main {
 }
 
 .meme--image {
-    max-width: 100%;
+    max-width: 50%;
     border-radius: 3px;
+    max-height: 65vh;
 }
 
 .meme--text {
