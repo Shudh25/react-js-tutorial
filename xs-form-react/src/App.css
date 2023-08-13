@@ -1,0 +1,19 @@
+.app{
+    width: 100%;
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.change{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: linear-gradient(90deg,#7ad29c 1.18%,#8bd5e0);
+  border: none;
+  border-radius: 7px;
+  color: #000000bb;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 20px;
+}
