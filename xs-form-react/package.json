@@ -1,7 +1,8 @@
 {
   "name": "xs-form-react",
-  "private": true,
   "version": "0.0.0",
+  "proxy":"http://localhost:8080",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",

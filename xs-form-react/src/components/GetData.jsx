@@ -6,9 +6,16 @@ export default function GetData() {
   // api url
   const api_url = "http://localhost:8080/getData";
 
-  fetch("http://localhost:8080/getData")
-    .then((res) => res.json())
-    .then((data) => console.log(data));
+  //   const [data, setData] = React.useState([{}]);
+
+  //   React.useEffect(() => {
+  //     fetch("http://localhost:8080/getData")
+  //       // fetch("/getData")
+  //       .then((res) => res.json())
+  //       .then((data) => setData(data));
+  //   }, []);
+
+  //   console.log(data);
 
   // Defining async function
   async function getapi(url) {
@@ -33,28 +40,28 @@ export default function GetData() {
   // Function to define innerHTML for HTML table
   function show(data) {
     let tableData = `<tr>
-          <th class="table-header">Name</th>
-          <th class="table-header">Gender</th>
-          <th class="table-header">From Date</th>
-          <th class="table-header">To Date</th>
-          <th class="table-header">Phone</th>
-          <th class="table-header">Resume</th>
-          <th class="table-header">Email</th>
-         </tr>`;
+            <th class="table-header">Name</th>
+            <th class="table-header">Gender</th>
+            <th class="table-header">From Date</th>
+            <th class="table-header">To Date</th>
+            <th class="table-header">Phone</th>
+            <th class="table-header">Resume</th>
+            <th class="table-header">Email</th>
+           </tr>`;
 
     // Loop to access all rows
     for (let r of data) {
       tableData += `<tr>
-    <td>${r.name} </td>
-    <td>${r.gender}</td>
-    <td>${r.from_Date}</td>
-    <td>${r.to_Date}</td>
-    <td>+91 ${r.phone}</td>
-    <td title="Open File">
-        <a href="http://localhost:8080/${r.resume}"> ${r.resume}</a>
-    </td>
-    <td>${r.email}</td>       
-    </tr>`;
+      <td>${r.name} </td>
+      <td>${r.gender}</td>
+      <td>${r.from_Date}</td>
+      <td>${r.to_Date}</td>
+      <td>+91 ${r.phone}</td>
+      <td title="Open File">
+          <a href="http://localhost:8080/${r.resume}"> ${r.resume}</a>
+      </td>
+      <td>${r.email}</td>
+      </tr>`;
     }
 
     // Setting innerHTML as tableData variable
