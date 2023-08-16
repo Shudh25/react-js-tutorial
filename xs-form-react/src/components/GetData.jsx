@@ -70,7 +70,7 @@ export default function GetData() {
   }
   return (
     <div>
-      <div className="container">
+      <div className="containerG">
         <div id="loading">
           <span className="sr-only">Loading...</span>
         </div>

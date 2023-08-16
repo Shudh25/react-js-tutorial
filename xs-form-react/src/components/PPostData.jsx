@@ -15,6 +15,7 @@ export default function PPostData() {
       errorElement.style.display = "none";
       send(e);
       submitRes.innerText = "Data Submitted Sucessfully";
+      formE1.reset();
     }
   }
 
@@ -25,7 +26,7 @@ export default function PPostData() {
 
     var numbers = /^[0-9]+$/;
 
-    if (phone.value.match(numbers) === null) {
+    if (phone.value.match(numbers) == null) {
       error_messages.push("Enter Number only in Phone");
       console.log("hello");
     }
