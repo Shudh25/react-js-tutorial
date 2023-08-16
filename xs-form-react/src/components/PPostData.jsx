@@ -52,12 +52,20 @@ export default function PPostData() {
 
     //EMAIL VALIDATIONS
 
-    var validRegex =
-      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@(xenonstack.in|xenonstack.com)$/;
-    var receivedEmail = email.value.trim();
+    // var validRegex =
+    //   // /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@(xenonstack.in|xenonstack.com)$/;
+    //   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]/;
+    var validRegex =  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]/;
+    var validRegex2 =   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@(google.com)$/;
+
+    
 
     //Checking Custom Domain Vaidation
     if (!receivedEmail.toLowerCase().match(validRegex)) {
+      error_messages.push("Please enter valid email address.");
+    }
+    //Checking Custom Domain Vaidation
+    if (receivedEmail.toLowerCase().match(validRegex2) {
       error_messages.push("Please enter valid email address.");
     }
 
